@@ -1,0 +1,234 @@
+:root {
+  --main-color: #10cab7;
+  --color-dark: #1d2231;
+  --text-grey: #8390a2;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+  font-family: 'poppins', sans-serif;
+}
+/* start saidbar  */
+.saidbar {
+  width: 345px;
+  position: fixed;
+  z-index: 100px;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: var(--main-color);
+  transition: width 300ms;
+}
+.saidbar-brand {
+  padding: 16px 0 16px 32px;
+  color: #fff;
+  height: 90px;
+}
+.saidbar-brand span {
+  content: "\f369";
+  display: inline-block;
+  padding-right: 16px;
+}
+.saidbar-menu {
+  margin-top: 16px;
+}
+.saidbar-menu li {
+  width: 100%;
+  margin-bottom: 30px;
+  padding-left: 16px;
+}
+.saidbar-menu li a {
+  padding-left: 16px;
+  display: block;
+  color: #fff ;
+  height: 60px;
+  padding-top: 16px;
+  font-size: 19px;
+  transition: all 0.5s;
+}
+.saidbar-menu li a.active {
+  background-color: #fff;
+  color: var(--main-color);
+  border-radius: 30px 0 0 30px;
+}
+.saidbar-menu li a:hover {
+    padding-top: 16px;
+    background-color: #fff;
+    padding-bottom: 16px;
+    color: var(--main-color);
+    border-radius: 30px 0 0 30px;
+}
+.saidbar-menu li a span:first-child {
+    font-size: 24px;
+    padding-right: 16px;
+}
+.main-content {
+  margin-left: 345px;
+  transition: margin-eft 300ms;
+}
+#nav-toggle:checked ~ .main-content {
+  margin-left: 70px;
+}
+#nav-toggle:checked ~ .main-content header {
+  width: calc(100% - 70px);
+  left: 70px;
+}
+.main-content header {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 22px;
+  box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  left: 345px;
+  width: calc(100% - 345px);
+  top: 0;
+  z-index: 300;
+  background-color: #fff;
+  transition: left 300ms;
+}
+#nav-toggle {
+  display: none;
+}
+#nav-toggle:checked + .saidbar {
+  width: 70px;
+}
+#nav-toggle:checked + .saidbar .saidbar-brand,
+#nav-toggle:checked + .saidbar li {
+  padding-left: 16px;
+  text-align: center;
+}
+#nav-toggle:checked + .saidbar li a {
+  padding-left: 0;
+}
+#nav-toggle:checked + .saidbar .saidbar li a span {
+  padding-right: 16px;
+}
+#nav-toggle:checked + .saidbar .saidbar-brand h2 span:last-child,
+#nav-toggle:checked + .saidbar li a span:last-child {
+  display: none;
+}
+.main-content header h2 {
+  color: #222;
+}
+.main-content header label span {
+  font-size: 24px;
+  padding-right: 16px;
+}
+@media (max-width: 1200px) {
+  .saidbar {
+    width: 70px;
+  }
+  .saidbar .saidbar-brand,
+  .saidbar li {
+    padding-left: 16px;
+    text-align: center;
+  }
+  .saidbar li a {
+    padding-left: 0;
+  }
+  .saidbar .saidbar-brand h2 span:last-child,
+  .saidbar li a span:last-child {
+    display: none;
+  }
+    .main-content {
+      margin-left: 70px;
+    }
+    .main-content header {
+      width: calc(100% - 70px);
+      left: 70px;
+    }
+}
+@media (max-width: 960px) {
+
+
+
+}
+@media (max-width: 768px) {
+  .saidbar {
+    left: -100% !important;
+  }
+  header h2 {
+    display: flex;
+    align-items: center;
+  }
+  header h2 label {
+    background-color: var(--main-color);
+    display: inline-block;
+    padding-right: 0;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center !important;
+    margin-right: 16px;
+  }
+  header h2 label span {
+    text-align: center;
+    padding-right: 0 !important;
+  }
+  .main-content {
+    width: 100%;
+    margin-left: 0;
+  }
+  header {
+    width: 100% !important;
+    left: 0 !important;
+  }
+  #nav-toggle:checked + .saidbar {
+    left: 0 !important;
+    z-index: 200;
+    width: 345px;
+  }
+  #nav-toggle:checked + .saidbar {
+    width: 345px;
+    z-index: 200;
+  }
+  #nav-toggle:checked + .saidbar .saidbar-brand,
+  #nav-toggle:checked + .saidbar li {
+    padding-left: 32px;
+    text-align: left;
+  }
+  #nav-toggle:checked + .saidbar li a {
+    padding-left: 16px;
+  }
+  #nav-toggle:checked + .saidbar .saidbar-brand h2 span:last-child,
+  #nav-toggle:checked + .saidbar li a span:last-child {
+    display: inline;
+  }
+  #nav-toggle:checked + .saidbar + .main-content {
+      margin-left: 0;
+  }
+}
+main {
+    margin-top: 48px;
+    padding: 32px 18px;
+    background-color: #f1f5f9;
+    min-height: calc(100vh - 90px);
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+/* end saidbar  */
+
+.alert {
+    width: 100%;
+    height: 75px;
+    padding: 23px 15px 20px 15px;
+    background-color: #3be2146b;
+    margin-bottom: 20px;
+    color: #539356;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 5px;
+    font-weight: 500;
+}
+small {
+    color: red;
+    font-weight: 500;
+    padding: 5px;
+}

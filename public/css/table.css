@@ -1,0 +1,52 @@
+table {
+    border-collapse: collapse;
+
+}
+.card {
+    background-color: #fff;
+    border-radius: 5px;
+}
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #f0f0f0;
+}
+.card-header button {
+    background-color: var(--main-color);
+    border-radius: 10px;
+    color: #fff;
+    font-size: 15px;
+    padding: 13px 16px;
+    border: 1px solid var(--main-color);
+    cursor: pointer;
+}
+.card-header {
+    padding: 20px;
+}
+thead tr {
+    border-top: 1px solid #f0f0f0;
+    border-bottom: 1px solid #f0f0f0;
+
+}
+thead td {
+    font-weight: 700;
+    color: #222;
+}
+td {
+    padding: 10px 16px;
+    font-size: 15px;
+    color: var(--text-grey);
+    text-align: center;
+}
+tbody tr td:last-child span {
+    font-size: 30px;
+    color: var(--main-color);
+    margin-left: 15px;
+}
+tbody a {
+    color: white;
+}
+table i {
+    color: var(--main-color);
+}

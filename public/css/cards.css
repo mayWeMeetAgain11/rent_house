@@ -1,0 +1,47 @@
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+    width: 100%;
+}
+a {
+    color: #222;
+}
+.cards a:hover .card-single:last-child,
+.cards a:hover .card-single:last-child h1,
+.cards a:hover .card-single:last-child div:first-child span,
+.cards a:hover .card-single:last-child div:last-child span {
+    color: #fff;
+}
+.cards a:hover .card-single:last-child {
+    background-color: var(--main-color);
+}
+@media (max-width: 767px) {
+    .cards {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+.card-single {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 3px;
+    transition: all 0.5s;
+}
+.card-single div:last-child span {
+    color: var(--main-color);
+    font-size: 45px;
+}
+.card-single div:first-child span {
+    color: var(--text-grey);
+}
+
+/* .card-single:last-child {
+    background-color: var(--main-color);
+}
+.card-single:last-child h1,
+.card-single:last-child div:first-child span,
+.card-single:last-child div:last-child span {
+    color: #fff;
+} */

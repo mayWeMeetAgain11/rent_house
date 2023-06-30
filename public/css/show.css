@@ -1,0 +1,117 @@
+/* body {
+margin: 0;
+padding: 0;
+display: flex;
+align-items: center;
+justify-content: center;
+min-height: 100vh;
+font-family: sans-serif;
+background: #290808;
+} */
+.containers{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 90%;
+    background: #fff;
+    margin: 20px auto;
+}
+.containers .imgboxs{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 350px;
+    width: 50%;;
+}
+.containers .imgboxs::before{
+    content:'home';
+    position:absolute;
+    top: 20px;
+    left: 20px;
+    color: #000;
+    opacity: 0.1;
+    font-weight:800;
+    font-size: 800;
+    z-index: 100;
+}
+.containers .imgboxs img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.containers .details{
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start;
+    align-items: center;
+    width: 50%;
+    box-sizing: border-box;
+    padding: 40px;
+}
+
+
+.containers .details h2{
+    margin-bottom: 5px;
+    padding: 0;
+    font-size: 2.5em;
+    line-height: 0.8em;
+    color: #444;
+
+}
+.containers .details span{
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #999;
+}
+.containers .details p{
+    max-width: 85%;
+    color: #333;
+    font-size:15px ;
+}
+
+.containers .details h3{
+    margin: 0;
+    padding: 0;
+    font-size: 1.5em;
+    color: #a2a2a2;
+    float: left;
+}
+.containers .details button{
+    background: #ee2222;
+    color: #fff;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    padding: 10px 15px;
+    position: absolute;
+    margin-top: 5px;
+    right: 10px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-radius: 40px;
+    float: right;
+    cursor: pointer;
+}
+.containers .details .supmit{
+    background: #ee2222;
+    color: #fff;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    padding: 10px 15px;
+    position: absolute;
+    margin-top: 5px;
+    right: 135px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-radius: 40px;
+    float: right;
+    cursor: pointer;
+}
